@@ -6,32 +6,69 @@
     <title>Login Page</title>
     <script src="app.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>curd operation</title>
 </head>
 <body>
-
-    <body style="color:white;background-color:#1d2630 ">
-    
-    <div class="container mt-5">
-        <div class="text-center">
-            <h1 class="display-5 mb-5"><strong>CURD APPLICATION</strong></h1>
-        </div>
-        <div class="main row justify-content-center">
-          <form action="" id="student-form" class="row justify-content-center mb-4" autocomplete="off">
-            <div class="col-10 mb-3">
-                <label for="firstName">FirstName</label>
-                <input  class="forms-control"id="firstName" type="text" placeholder="Enter first Name">
-
-            </div>
-            <div class="col-10 mb-3">
-                <label for="lastName">lastName</label>
-                <input  class="forms-control"id="firstName" type="text" placeholder="Enter first Name">
-
-            </div>
-          </form>
-          
-        </div>
+   <h3>CURD OPERATION</h3>
+   <form action="#" id="frm">
+    <input type="hidden" id="id"/>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="full name"/>
     </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="text" id="password" placeholder="password"/>
+
+      </div>
+      <button type="submit" class="btn">submit</button>
+</form>
+    <table>
+        <thead>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>password</th>
+            <th> Edit</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+            <tr>
+              <td>1</td> 
+              <td>pavithra</td>
+              <td>12345</td>
+              <td>
+                <button class="btn-edit">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              </td> 
+              <td>
+                <button class="btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+                </td>
+            </tr>
+            <tr>
+              <td>2</td> 
+              <td>pavithra</td>
+              <td>12345</td>
+              <td>
+                <button class="btn-edit">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              </td> 
+              <td>
+                <button class="btn-delete">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+   <script src="app.js"></script>
+      
 
 </body>
 </html>
