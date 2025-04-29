@@ -1,88 +1,60 @@
-*{
-    margin:0 ;
-    padding: 0;
-    box-sizing:border-box ;
-    font-family:"inter",sans-serif;
-}
-body{
-    padding: 20px;
-}
-h3{
-    text-align: center;
-    font-weight: 400;
-    margin: 15px 0;
-    color: aqua;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-form{
-    width:300px ;
-}
-form .form-group{
-   
-    display: flex;
-    flex-direction: column;
-}
-form .form-group label{
-    font-weight: 500;
-    text-transform: uppercase;
-    min-width:150px ;
+body > table{
+    width: 80%;
 }
 
-form .form-group input{
-    font-size: 16px;
-    padding:5px 10px ;
-    border: none;
-    outline: none;
-    background-color:#f1f1f1 ;
-    border-radius:5px ;
-    margin: 10px 5px;
-
-}
-form button{
-    padding:5px 20px;
-    display: flex;
-    gap: 5px;
-    font-size:15px ;
-    font-weight: 500;
-    color: #fff;
-    border: none;
-    background-color:brown ;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin:15px 0;
-}
 table{
-    border:1px solid #ccc;
-    border-collapse:collapse ;
-    min-width: 600px;
+    border-collapse: collapse;
 }
-table thead tr{
-   background-color: teal; 
-   color: #fff;
-   border-color: tomato;
+table.list{
+    width:100%;
 }
-table thead tr th{
-    border-color: tomato; 
-    font-weight: 400;
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
 }
-table td,
-table th{
-    border:1px solid #ccc; 
-    padding:5px 10px ;
+tr:nth-child(even),table.list thead>tr {
+    background-color: #dddddd;
 }
-table td button{
+
+input[type=text], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]{
+    width: 30%;
+    background-color: #ddd;
+    color: #000;
+    padding: 14px 20px;
+    margin: 8px 0;
     border: none;
-    outline: none;
-    font-size: 16px;
-    color: #f1f1f1;
-    padding:5px 10px ;
-    display: block;
-    margin: 0 auto;
-    background-color:teal;
-    border-radius:3px ;
+    border-radius: 4px;
     cursor: pointer;
 }
-.btn-delete{
-    background-color: red;
+
+form div.form-action-buttons{
+    text-align: right;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0000ee;
+    margin-right: 4px;
+}
+
+label.validation-error{
+    color:   red;
+    margin-left: 5px;
+}
+
+.hide{
+    display:none;
 }

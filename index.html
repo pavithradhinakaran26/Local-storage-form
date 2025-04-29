@@ -1,74 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <script src="app.js"></script>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>curd operation</title>
 </head>
+
 <body>
-   <h3>CURD OPERATION</h3>
-   <form action="#" id="frm">
-    <input type="hidden" id="id"/>
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" id="name" placeholder="full name"/>
-    </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="text" id="password" placeholder="password"/>
-
-      </div>
-      <button type="submit" class="btn">submit</button>
-</form>
     <table>
-        <thead>
-            <th>S.No</th>
-            <th>Name</th>
-            <th>password</th>
-            <th> Edit</th>
-            <th>Delete</th>
-        </thead>
-        <tbody>
-            <tr>
-              <td>1</td> 
-              <td>pavithra</td>
-              <td>12345</td>
-              <td>
-                <button class="btn-edit">
-                <i class="fa-solid fa-pen-to-square"></i>
-              </button>
-              </td> 
-              <td>
-                <button class="btn">
-                  <i class="fa-solid fa-trash"></i>
-                </button>
-                </td>
-            </tr>
-            <tr>
-              <td>2</td> 
-              <td>pavithra</td>
-              <td>12345</td>
-              <td>
-                <button class="btn-edit">
-                <i class="fa-solid fa-pen-to-square"></i>
-              </button>
-              </td> 
-              <td>
-                <button class="btn-delete">
-                  <i class="fa-solid fa-trash"></i>
-                </button>
-                </td>
-            </tr>
-        </tbody>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label>EMP Code</label>
+                        <input type="text" name="empCode" id="empCode">
+                    </div>
+                    <div>
+                        <label>Salary</label>
+                        <input type="text" name="salary" id="salary">
+                    </div>
+                    <div>
+                        <label>City</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>EMP Code</th>
+                            <th>Salary</th>
+                            <th>City</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
     </table>
-
-
-   <script src="app.js"></script>
-      
-
+    <script src="app.js"></script>
 </body>
+
 </html>
